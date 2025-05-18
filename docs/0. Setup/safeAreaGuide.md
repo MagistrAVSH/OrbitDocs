@@ -1,0 +1,1 @@
+﻿# Safe Area Guide
