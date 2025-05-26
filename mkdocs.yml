@@ -2,6 +2,8 @@ site_name: Orbit Platform Documentation
 site_url: https://mydomain.org/
 theme:
   name: material
+  icon:
+    logo: material/orbit
   features:
     - navigation.tabs
     - navigation.path
