@@ -5,6 +5,10 @@ theme:
   icon:
     logo: material/orbit
   features:
+    - navigation.instant
+    - navigation.instant.prefetch
+    - navigation.instant.progress
+    - navigation.sections
     - navigation.tabs
     - navigation.path
     - navigation.indexes
