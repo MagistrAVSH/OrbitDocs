@@ -1,5 +1,5 @@
 site_name: Orbit Platform Documentation
-site_url: https://mydomain.org/
+site_url: https://magistravsh.github.io/OrbitDocs/
 use_directory_urls: false
 theme:
   name: material
