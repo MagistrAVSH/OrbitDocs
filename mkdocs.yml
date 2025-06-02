@@ -1,5 +1,6 @@
 site_name: Orbit Platform Documentation
 site_url: https://mydomain.org/
+use_directory_urls: false
 theme:
   name: material
   icon:
