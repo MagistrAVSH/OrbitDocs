@@ -19,3 +19,4 @@ theme:
     primary: white
 plugins:
   - search
+  - awesome-pages
