@@ -1,44 +1,36 @@
 # JS Games
 
-Getting Started
+## Getting Started
+**Quick start**  
+  1. **Install the SDK Run the following command to [install the SDK](https://www.npmjs.com/package/@orbit-software/sdk) via npm:**
+>npm i @orbit-software/sdk
+2. **(Alternate) Install through "script tag"**
 
-Quick start
-1. Install the SDK
-Run the following command to install the SDK (https://www.npmjs.com/package/@orbit-software/sdk) via npm:
-npm i @orbit-software/sdk
+      ```<script src="https://storage.googleapis.com/social-networth/scripts/sdk.umd.js"></script>```
 
+3. **Initialize the SDK**   
+  Call the initialization functions at the start of your application:
 
-2. (Alternate) Install through <script> tag
-<script src="https://storage.googleapis.com/social-networth/scripts/sdk.umd.js"></script>
+    ```await PortalSDK.initialize();```
 
-
-
-2. Initialize the SDK
-Call the initialization functions at the start of your application:
-await PortalSDK.initialize();
-PortalSDK.initializeOverlay();
+    ```PortalSDK.initializeOverlay();```
 
 
-
-3. Launch an Advertisement (Optional)
-If you need to launch an ad at the start, check if ads are enabled and then request one:
+4. **Launch an Advertisement (Optional):**  
+   If you need to launch an ad at the start, check if ads are enabled and then request one:  
+```
 if (await PortalSDK.isAdEnabled()) {
-  try {
-    await PortalSDK.requestAd();
-  } catch (ex) {
-    console.error(ex);
-  }
+    try {
+        await PortalSDK.requestAd();
+    } catch (ex) {
+        console.error(ex);
+    }
 }
-
-
-
-
-4. Setup game time tracking
-
-
-You must add the code for tracking game time as shown here:
-let timer
-
+```
+5. **Setup game time tracking**  
+  You must add the code for tracking game time as shown here:  
+  let timer
+```
 const trackTimeEveryS = 20 // 20 seconds
 
 function startGameTimeTrack() {
@@ -50,23 +42,14 @@ function startGameTimeTrack() {
        window.PortalSDK.trackGameTimeTick()
    }, trackTimeEveryS * 1000)
 }
+```
+And call the code above at the moment of loading the game instance.  
+```startGameTimeTrack()```  
 
-
-And call the code above at the moment of loading the game instance.
-// ------------------
-startGameTimeTrack()
-// ------------------
-
-
-5. Call game-ready event
-
-Call this method when the game is ready and visible to the user.
-// ------------------
-window.PortalSDK.gameReady()
-// ------------------
-
-
-
-Notes:
-Ensure you handle exceptions gracefully, especially when requesting ads.
-Initialization should occur as early as possible in your application lifecycle to prevent delays.
+6. **Call game-ready event**  
+  Call this method when the game is ready and visible to the user.  
+  ```window.PortalSDK.gameReady()  ```  
+  
+  _Notes:_  
+  *Ensure you handle exceptions gracefully, especially when requesting ads.
+Initialization should occur as early as possible in your application lifecycle to prevent delays.*
