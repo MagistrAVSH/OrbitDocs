@@ -1,3 +1,9 @@
-# Index
+---
+template: home.html
+title: Material for MkDocs
+social:
+  cards_layout_options:
+    title: Documentation that simply works
+---
 
-soon
+Welcome to Material for MkDocs.

@@ -1,9 +1,8 @@
 site_name: Orbit Platform Documentation
-site_url: https://magistravsh.github.io/OrbitDocs/
+site_url: https://magistravsh.github.io/OrbitDocs
 theme:
   name: material
-  icon:
-    logo: material/orbit
+  custom_dir: overrides
   features:
     - navigation.instant
     - navigation.instant.prefetch
