@@ -30,7 +30,7 @@ Here is an example for Unity, and an example for JavaScript games is coming soon
 >var items = await PortalSDK.GetShopItems();
 
 ShopItem has the same fields as in the admin, and the most important is the id
-```
+```c#
 public class ShopItem
 {
    /// <summary>
@@ -72,7 +72,7 @@ It gives you all the purchased items by the current player.
 If your item can be purchased infinitely, you can just not mark it. SDK API does not limit you in the number of purchased items per player.   
 3. Make a code to buy an item by id
 >var result = await PortalSDK.OpenPurchaseConfirmModal(itemId);
-```
+```C#
 if (result is { IsSuccessful: true })
 {
    // ...   

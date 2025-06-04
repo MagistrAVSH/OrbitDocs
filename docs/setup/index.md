@@ -1,3 +1,1 @@
-# Setup
-
-Intro txt soon
+soon

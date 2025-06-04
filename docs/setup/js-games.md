@@ -11,7 +11,7 @@
 ```PortalSDK.initializeOverlay();```  
 4. **Launch an Advertisement (Optional):**  
    If you need to launch an ad at the start, check if ads are enabled and then request one:  
-```
+```JS
 if (await PortalSDK.isAdEnabled()) {
     try {
         await PortalSDK.requestAd();
@@ -23,7 +23,7 @@ if (await PortalSDK.isAdEnabled()) {
 5. **Setup game time tracking**  
   You must add the code for tracking game time as shown here:  
   let timer
-```
+```JS
 const trackTimeEveryS = 20 // 20 seconds
 
 function startGameTimeTrack() {

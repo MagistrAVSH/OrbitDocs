@@ -75,7 +75,7 @@ Move com.orbit.portalsdk directory into Assets/ directory of your Unity Project
   If you are not using the Unity Web Template from SDK, you must add the code for tracking game time as shown here:
 let timer
 >const trackTimeEveryS = 20 // 20 seconds
-```
+```C#
 function startGameTimeTrack() {
    if (timer) clearInterval(timer)
 
@@ -88,7 +88,7 @@ function startGameTimeTrack() {
 ```  
   
 And call the code above at the moment of loading the Unity instance.
-```
+```C#
 unity.createUnityInstance(canvas, config,
    (progress) => progressBarFull.style.width = 100 * progress + "%")
    .then((unityInstance) => {
@@ -100,7 +100,7 @@ unity.createUnityInstance(canvas, config,
        loadingBar.style.display = "none";
       
    })
-};  - лишняя скобка
+};  - лишняя скобка?
 ```
 
 __A game without a functional game time tracking system will not be approved by moderators.__  

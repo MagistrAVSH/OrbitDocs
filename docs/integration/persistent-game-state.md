@@ -4,7 +4,7 @@ To maintain a persistent game state for each player, you can use the SDK API to 
 The most convenient approach is to save and retrieve the game state serialized in JSON format.
 
 The SDK provides three methods for data access. All operations are asynchronous due to their cloud nature. Still, we provide sync methods as the main because it may be difficult to adapt existing games with async methods, especially in the Unity environment
-```
+```C#
 // Write
 PortalSDK.SetValue("string key", "string value");
 
