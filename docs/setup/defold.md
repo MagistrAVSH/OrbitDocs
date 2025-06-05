@@ -27,4 +27,3 @@ The API is documented in detail:
 ## Multi-language Support
 
 This project provides implementation for JavaScript and Lua (Defold), allowing seamless integration across different environments. The JavaScript version supports browser-based functionality, while Lua integration ensures compatibility with the Defold engine. This dual-language support enhances flexibility for game development and deployment.
-Let me know if you'd like any refinements! 🚀
