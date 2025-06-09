@@ -1,4 +1,4 @@
-# Introduction
+# Getting Started
 
 Axbe Games is a platform designed to enable developers to bring WebGL games into the Telegram store platform, functioning similarly to Steam on a desktop or Google Play/App Store. It allows users to deploy their games as Web Apps in Telegram, leveraging a seamless gaming experience within a widely accessible platform. 
 
