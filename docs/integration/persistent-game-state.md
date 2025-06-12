@@ -5,7 +5,7 @@ The most convenient approach is to save and retrieve the game state serialized i
 
 The SDK provides three methods for data access. All operations are asynchronous due to their cloud nature. Still, we provide sync methods as the main because it may be difficult to adapt existing games with async methods, especially in the Unity environment
 
-=== "C#/Unity"
+=== "Unity"
 
 	```csharp
 	//Write
@@ -22,7 +22,7 @@ The SDK provides three methods for data access. All operations are asynchronous 
 	await PortalSDK.SetValueAsync("string key", "string value");
 	```
 
-=== "LUA/Defold"
+=== "Defold"
 
 	```lua
 		--Write
@@ -37,7 +37,7 @@ The SDK provides three methods for data access. All operations are asynchronous 
 	```
 
 
-=== "TS/JS"
+=== "JS"
 
 	```ts
 	//Write
