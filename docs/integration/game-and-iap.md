@@ -33,13 +33,7 @@ Here is an example for Unity, and an example for JavaScript games is coming soon
 	```
 === "JS"
 	```js
-	getPurchasedShopItems: async () => {
-	const response = (await makeRequest(
-		`shop/purchases`,
-		"GET",
-	)) as CryptoSteamSDKShopItem[];
-	return response;
-	}
+ 	const response = await PortalSDK.getPurchasedShopItems();
 	```
 ShopItem has the same fields as in the admin, and the most important is the id
 === "Unity"
@@ -78,7 +72,7 @@ ShopItem has the same fields as in the admin, and the most important is the id
     }
     ```
 === "JS"
-    ```javascript
+    ```JS
     interface CryptoSteamSDKShopItem {
         id: number;
         name: string;
@@ -92,10 +86,9 @@ ShopItem has the same fields as in the admin, and the most important is the id
 === "Unity"
     ```C#
     var purchased = await PortalSDK.GetPurchasedShopItems();
-    ```
-    
+    ```  
 === "JS"
-    ```javascript
+    ```JS
     getPurchasedShopItems: () => Promise<CryptoSteamSDKShopItem[]>;
     ```
 It gives you all the purchased items by the current player.   
@@ -103,9 +96,16 @@ It gives you all the purchased items by the current player.
 If your item can be purchased infinitely, you can just not mark it. SDK API does not limit you in the number of purchased items per player.   
 3. Make a code to buy an item by id
 === "Unity"
-	```Unity
+	```C#
 	var result = await PortalSDK.OpenPurchaseConfirmModal(itemId);
 	if (result is { IsSuccessful: true })
+	```
+=== "JS"
+	```JS
+	const result = await PortalSDK.OpenPurchaseConfirmModal(itemId);
+	if (result && result.IsSuccessful === true) {
+		
+	}
 	```
 
 After player will see modal window:  
