@@ -24,8 +24,7 @@ Change game configuration
 ## How to use Shop API
 
 After you create your items, you can integrate them into your game.
-Here is an example for Unity, and an example for JavaScript games is coming soon.
-
+Here is an example for Unity, and an example for JavaScript games is coming soon.  
 1. First of all, you need to get all your items:
 === "Unity"
 	```C#
@@ -34,6 +33,12 @@ Here is an example for Unity, and an example for JavaScript games is coming soon
 === "JS"
 	```js
  	const response = await PortalSDK.getPurchasedShopItems();
+	```
+=== "Defold"
+	```lua
+	response = portalsdk.get_purchased_shop_items(function(self, data)
+	print("GetPurchasedShopItems: " .. table_to_string(data))
+    end)
 	```
 ShopItem has the same fields as in the admin, and the most important is the id
 === "Unity"
@@ -82,6 +87,17 @@ ShopItem has the same fields as in the admin, and the most important is the id
         updated: string;
     }
     ```
+=== "Defold"
+	```lua
+	local shopItem = {
+	    id = 1,
+	    name = "Sample Item",
+	    description = "This is a sample shop item.",
+	    price = 100,
+	    created = "2025-06-12T10:00:00Z",
+	    updated = "2025-06-12T12:00:00Z"
+	}
+	```
 2. The second important API method is:
 === "Unity"
     ```C#
@@ -91,6 +107,13 @@ ShopItem has the same fields as in the admin, and the most important is the id
     ```JS
     getPurchasedShopItems: () => Promise<CryptoSteamSDKShopItem[]>;
     ```
+=== "Defold"
+	```LUA
+	local promise = coroutine.create(function()
+    local shopItems = {}
+	coroutine.yield(shopItems)
+	end)
+	```
 It gives you all the purchased items by the current player.   
   Now you can display your shop screen and associate your items with ShopItems from the API and mark purchased it 
 If your item can be purchased infinitely, you can just not mark it. SDK API does not limit you in the number of purchased items per player.   
@@ -104,10 +127,16 @@ If your item can be purchased infinitely, you can just not mark it. SDK API does
 	```JS
 	const result = await PortalSDK.OpenPurchaseConfirmModal(itemId);
 	if (result && result.IsSuccessful === true) {
-		
+
 	}
 	```
-
+=== "LUA"
+	```lua
+	print("Test: OpenPurchaseConfirmModal() itemId: 66")
+    portalsdk.open_purchase_confirm_modal(66, function(self, data)
+    print("OpenPurchaseConfirmModal 66: " .. table_to_string(data))
+    end)
+	```
 After player will see modal window:  
   ![Описание изображения](images/game-and-iap/6.png)  
   If a user doesn't have enough balance, a top-up popup will be shown  

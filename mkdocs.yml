@@ -28,6 +28,11 @@ plugins:
   - search
   - awesome-pages
 markdown_extensions:
+  - attr_list
+  - md_in_html
+  - def_list
+  - tables
+  - admonition
   - pymdownx.highlight:
       anchor_linenums: true
       line_spans: __span
