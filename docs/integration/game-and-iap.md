@@ -25,7 +25,8 @@ Change game configuration
 
 After you create your items, you can integrate them into your game.
 Here is an example for Unity, and an example for JavaScript games is coming soon.  
-1. First of all, you need to get all your items:
+
+1.First of all, you need to get all your items:
 === "Unity"
 	```C#
 	var items = await PortalSDK.GetShopItems();
@@ -98,7 +99,7 @@ ShopItem has the same fields as in the admin, and the most important is the id
 	    updated = "2025-06-12T12:00:00Z"
 	}
 	```
-2. The second important API method is:
+2.The second important API method is:
 === "Unity"
     ```C#
     var purchased = await PortalSDK.GetPurchasedShopItems();
@@ -117,7 +118,8 @@ ShopItem has the same fields as in the admin, and the most important is the id
 It gives you all the purchased items by the current player.   
   Now you can display your shop screen and associate your items with ShopItems from the API and mark purchased it 
 If your item can be purchased infinitely, you can just not mark it. SDK API does not limit you in the number of purchased items per player.   
-3. Make a code to buy an item by id
+
+3.Make a code to buy an item by id
 === "Unity"
 	```C#
 	var result = await PortalSDK.OpenPurchaseConfirmModal(itemId);
@@ -130,7 +132,7 @@ If your item can be purchased infinitely, you can just not mark it. SDK API does
 
 	}
 	```
-=== "LUA"
+=== "Defold"
 	```lua
 	print("Test: OpenPurchaseConfirmModal() itemId: 66")
     portalsdk.open_purchase_confirm_modal(66, function(self, data)
