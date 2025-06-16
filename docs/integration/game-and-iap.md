@@ -33,12 +33,12 @@ Here is an example for Unity, and an example for JavaScript games is coming soon
 	```
 === "JS"
 	```js
- 	const response = await PortalSDK.getPurchasedShopItems();
+ 	const response = await PortalSDK.getShopItems();
 	```
 === "Defold"
 	```lua
-	response = portalsdk.get_purchased_shop_items(function(self, data)
-	print("GetPurchasedShopItems: " .. table_to_string(data))
+    portalsdk.get_shop_items(function(self, data)
+    print("GetShopItems: " .. table_to_string(data))
     end)
 	```
 ShopItem has the same fields as in the admin, and the most important is the id
@@ -110,10 +110,9 @@ ShopItem has the same fields as in the admin, and the most important is the id
     ```
 === "Defold"
 	```LUA
-	local promise = coroutine.create(function()
-    local shopItems = {}
-	coroutine.yield(shopItems)
-	end)
+    portalsdk.get_purchased_shop_items(function(self, data)
+    print("GetPurchasedShopItems: " .. table_to_string(data))
+    end)
 	```
 It gives you all the purchased items by the current player.   
   Now you can display your shop screen and associate your items with ShopItems from the API and mark purchased it 
@@ -134,9 +133,12 @@ If your item can be purchased infinitely, you can just not mark it. SDK API does
 	```
 === "Defold"
 	```lua
-	print("Test: OpenPurchaseConfirmModal() itemId: 66")
-    portalsdk.open_purchase_confirm_modal(66, function(self, data)
-    print("OpenPurchaseConfirmModal 66: " .. table_to_string(data))
+    portalsdk.open_purchase_confirm_modal(itemId, function(self, data)
+    if data and data.IsSuccessful then
+        print("Purchase successful!")
+    else
+        print("Purchase failed.")
+    end
     end)
 	```
 After player will see modal window:  
