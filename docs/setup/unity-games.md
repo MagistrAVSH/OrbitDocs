@@ -1,12 +1,12 @@
-# Unity Games
+# Unity Engine
 
 ## Getting Started
 
 ### Prerequisites  
   To work with PortalSDK, you’ll need the following:
 
-**Unity Versions:** Unity 2021 LTS, Unity 2022 LTS, or Unity 6 LTS (Unity 6 is preferable due to updated WebGL support).  
-  **Installed WebGL Platform:** Ensure that the WebGL Platform module is installed in your Unity setup.
+**Unity Versions:** Unity 2022 LTS, or Unity 6 LTS (Unity 6 is preferable due to updated WebGL support).  
+**Installed WebGL Platform:** Ensure that the WebGL Platform module is installed in your Unity setup.
 
 ### Unity WebGL Limitations
 Unity’s WebGL platform offers a powerful way to run games on the web, but there are some limitations to keep in mind:
@@ -29,44 +29,49 @@ For in-depth information about optimizing and working within Unity’s WebGL pla
 
 
 ### How to set up Unity Game with PortalSDK
-1. Step: Set up the package from Git
+#### 1. Set up the package from Git
 
-      [Unity documentation](https://docs.unity3d.com/Manual/upm-ui-giturl.html)
+[Unity documentation](https://docs.unity3d.com/Manual/upm-ui-giturl.html)
 
+1. Open your Unity project.
+2. Access the Package Manager in Unity, and select Add package from git URL...
+3. Enter the repository URL [https://github.com/orbit-software/com.orbit.portalsdk.git](https://github.com/orbit-software/com.orbit.portalsdk.git)
 
-    1. Open your Unity project.
-    2. Access the Package Manager in Unity, and select Add package from git URL...
-    3. [Enter the repository URL](https://github.com/orbit-software/com.orbit.portalsdk.git)
 ![Описание изображения](images/unity-games/1.png)
 
-2. Step: Set up the package from a local folder (alternative way 1)
+#### 2. Set up the package from a local folder (alternative way 1)
 
-      [Unity documentation](https://docs.unity3d.com/Manual/upm-ui-local.html)
+[Unity documentation](https://docs.unity3d.com/Manual/upm-ui-local.html)
     
-    1. Open [repository](https://github.com/orbit-software/com.orbit.portalsdk)
-    2. Download repository as zip and unarchive
+1. Open repository [https://github.com/orbit-software/com.orbit.portalsdk](https://github.com/orbit-software/com.orbit.portalsdk)
+2. Download repository as zip and unarchive
 
 ![Описание изображения](images/unity-games/2.png)  
 
 Move com.orbit.portalsdk directory into Assets/ directory of your Unity Project
 
 ![Описание изображения](images/unity-games/3.png)  
-3. Step: Set up the Unity Package directly into project (alternative way 2)  
-  - Open [repository](https://github.com/orbit-software/com.orbit.portalsdk)  
-  - Download repository as zip and unarchive
+#### 3. Step: Set up the Unity Package directly into project (alternative way 2)
+1. Open repository [https://github.com/orbit-software/com.orbit.portalsdk](https://github.com/orbit-software/com.orbit.portalsdk)  
+2. Download repository as zip and unarchive
 
 ![Описание изображения](images/unity-games/4.png)  
-  Move com.orbit.portalsdk directory into Assets/ directory of your Unity Project
+
+Move `com.orbit.portalsdk` directory into Assets/ directory of your Unity Project
+
 ![Описание изображения](images/unity-games/5.png)  
-3. Step: Download the WebGL Template  
+
+#### 4. Step: Download the WebGL Template  
   - Go to the repository unity-web-template and download the template files.  
   - Extract the contents if they are compressed.  
-  4. Step: Copy the WebGL Template into Your Project    
-    - In your Unity project directory, navigate to Assets/WebGLTemplates/.  
-    - If it doesn’t already exist, create a folder named PortalSDK.  
-    - Copy the downloaded PortalSDK WebGL template directory into this location.
+#### 4. Step: Copy the WebGL Template into Your Project    
+- 
+- In your Unity project directory, navigate to Assets/WebGLTemplates/.  
+- If it doesn’t already exist, create a folder named PortalSDK.  
+- Copy the downloaded PortalSDK WebGL template directory into this location.
 ![Описание изображения](images/unity-games/6.png)  
-  5. Step: Set the WebGL Template in Player Settings  
+
+#### 5. Set the WebGL Template in Player Settings  
   - Go to Edit > Project Settings > Player in Unity.  
   - Under the WebGL settings, find the WebGL Template selector.  
   - Select PortalSDK from the selector to apply it as your template.

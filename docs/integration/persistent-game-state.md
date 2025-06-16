@@ -37,7 +37,7 @@ The SDK provides three methods for data access. All operations are asynchronous 
 	```
 
 
-=== "JS"
+=== "JavaScript"
 
 	```ts
 	//Write

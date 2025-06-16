@@ -31,7 +31,7 @@ Here is an example for Unity, and an example for JavaScript games is coming soon
 	```C#
 	var items = await PortalSDK.GetShopItems();
 	```
-=== "JS"
+=== "JavaScript"
 	```js
  	const response = await PortalSDK.getShopItems();
 	```
@@ -77,7 +77,7 @@ ShopItem has the same fields as in the admin, and the most important is the id
         public DateTime updated;
     }
     ```
-=== "JS"
+=== "JavaScript"
     ```JS
     interface CryptoSteamSDKShopItem {
         id: number;
@@ -104,7 +104,7 @@ ShopItem has the same fields as in the admin, and the most important is the id
     ```C#
     var purchased = await PortalSDK.GetPurchasedShopItems();
     ```  
-=== "JS"
+=== "JavaScript"
     ```JS
     getPurchasedShopItems: () => Promise<CryptoSteamSDKShopItem[]>;
     ```
@@ -124,7 +124,7 @@ If your item can be purchased infinitely, you can just not mark it. SDK API does
 	var result = await PortalSDK.OpenPurchaseConfirmModal(itemId);
 	if (result is { IsSuccessful: true })
 	```
-=== "JS"
+=== "JavaScript"
 	```JS
 	const result = await PortalSDK.OpenPurchaseConfirmModal(itemId);
 	if (result && result.IsSuccessful === true) {
