@@ -3,6 +3,8 @@ site_url: https://magistravsh.github.io/OrbitDocs
 theme:
   name: material
   custom_dir: overrides
+  icon:
+    logo: material/orbit
   features:
     - navigation.instant
     - navigation.instant.prefetch
