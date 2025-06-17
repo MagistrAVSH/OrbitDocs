@@ -7,7 +7,7 @@ The SDK provides three methods for data access. All operations are asynchronous 
 
 === "Unity"
 
-	```csharp
+	```C#
 	//Write
 	PortalSDK.SetValue("string key", "string value");
 	//Read
@@ -24,7 +24,7 @@ The SDK provides three methods for data access. All operations are asynchronous 
 
 === "Defold"
 
-	```lua
+	```LUA
 		--Write
 		
 		portalsdk.set_value_sync("string key", "string value");
@@ -39,7 +39,7 @@ The SDK provides three methods for data access. All operations are asynchronous 
 
 === "JavaScript"
 
-	```ts
+	```JS
 	//Write
 	window.PortalSDK.setValue("string key", "string value");
 	//Read

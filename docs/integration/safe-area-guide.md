@@ -6,4 +6,4 @@ Telegram has mostly the same safe area that we can see in native mobile apps and
 
 ![Описание изображения](images/safe-area-guide/2.png)
 
-UI in games needs to be updated according to these references
+UI in games needs to be updated according to these references.

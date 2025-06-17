@@ -39,7 +39,7 @@ For in-depth information about optimizing and working within Unity’s WebGL pla
 
 ![Описание изображения](images/unity-games/1.png)
 
-#### 2. Set up the package from a local folder (alternative way 1)
+#### 1.1. Set up the package from a local folder (alternative way 1)
 
 [Unity documentation](https://docs.unity3d.com/Manual/upm-ui-local.html)
     
@@ -51,7 +51,7 @@ For in-depth information about optimizing and working within Unity’s WebGL pla
 Move com.orbit.portalsdk directory into Assets/ directory of your Unity Project
 
 ![Описание изображения](images/unity-games/3.png)  
-#### 3. Step: Set up the Unity Package directly into project (alternative way 2)
+#### 1.2. Step: Set up the Unity Package directly into project (alternative way 2)
 1. Open repository [https://github.com/orbit-software/com.orbit.portalsdk](https://github.com/orbit-software/com.orbit.portalsdk)  
 2. Download repository as zip and unarchive
 
@@ -61,38 +61,40 @@ Move `com.orbit.portalsdk` directory into Assets/ directory of your Unity Projec
 
 ![Описание изображения](images/unity-games/5.png)  
 
-#### 4. Step: Download the WebGL Template  
+#### 2. Step: Download the WebGL Template  
   - Go to the repository unity-web-template and download the template files.  
   - Extract the contents if they are compressed.  
-#### 4. Step: Copy the WebGL Template into Your Project    
-- 
+#### 3. Step: Copy the WebGL Template into Your Project    
 - In your Unity project directory, navigate to Assets/WebGLTemplates/.  
 - If it doesn’t already exist, create a folder named PortalSDK.  
 - Copy the downloaded PortalSDK WebGL template directory into this location.
 ![Описание изображения](images/unity-games/6.png)  
 
-#### 5. Set the WebGL Template in Player Settings  
+#### 4. Set the WebGL Template in Player Settings  
   - Go to Edit > Project Settings > Player in Unity.  
   - Under the WebGL settings, find the WebGL Template selector.  
   - Select PortalSDK from the selector to apply it as your template.
 ![Описание изображения](images/unity-games/7.png)  
-  6. **Step!!!! _VERY IMPORTANT_** - Setup game time tracking  
+### 4.1. Step **VERY IMPORTANT** - Setup game time tracking  
   If you are not using the Unity Web Template from SDK, you must add the code for tracking game time as shown here:
 let timer
+=== "C#"
 >const trackTimeEveryS = 20 // 20 seconds
+=== "C#"
 ```C#
-function startGameTimeTrack() {
-   if (timer) clearInterval(timer)
-
-   window.PortalSDK.trackGameTimeTick()
-
-   timer = setInterval(() => {
-       window.PortalSDK.trackGameTimeTick()
-   }, trackTimeEveryS * 1000)
-}
+  function startGameTimeTrack() {
+     if (timer) clearInterval(timer)
+  
+     window.PortalSDK.trackGameTimeTick()
+  
+     timer = setInterval(() => {
+         window.PortalSDK.trackGameTimeTick()
+     }, trackTimeEveryS * 1000)
+  }
 ```  
   
 And call the code above at the moment of loading the Unity instance.
+=== "C#"
 ```C#
 unity.createUnityInstance(canvas, config,
    (progress) => progressBarFull.style.width = 100 * progress + "%")
@@ -105,21 +107,20 @@ unity.createUnityInstance(canvas, config,
        loadingBar.style.display = "none";
       
    })
-};  - лишняя скобка?
 ```
 
 __A game without a functional game time tracking system will not be approved by moderators.__  
- 6. Step: Set WebGL Publishing settings
+### 5. Step: Set WebGL Publishing settings
 
 **Important settings:**
 
-  Compression Format: Brotli  
-  Name Files As Hashes: true  
-  Target WebAssembly 2023: false  
-  Use WebAssembly.Table: false  
-  Enable BigInt: false  
+  - Compression Format: Brotli  
+  - Name Files As Hashes: true  
+  - Target WebAssembly 2023: false  
+  - Use WebAssembly.Table: false  
+  - Enable BigInt: false  
 ![Описание изображения](images/unity-games/8.png)  
-  7. Step: Build and Run for Testing  
+### 6. Step: Build and Run for Testing  
   - Go to File > Build Settings in Unity.  
   - Select WebGL as your platform and click Switch Platform.  
   - Click Build and Run to test your setup.  
