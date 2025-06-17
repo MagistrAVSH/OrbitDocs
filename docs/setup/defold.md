@@ -7,7 +7,7 @@
 ### How to install:
 
 1. Copy a link from releases on GitHub:
-[Download v0.1.6.1](https://github.com/orbit-software/portalsdk-defold/archive/refs/tags/v0.1.6.2.zip)
+[Download v0.1.6.2](https://github.com/orbit-software/portalsdk-defold/archive/refs/tags/v0.1.6.2.zip)
 
 2. Install into dependencies of game.project:
 === "game.project"
