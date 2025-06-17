@@ -94,8 +94,8 @@ let timer
 ```  
   
 And call the code above at the moment of loading the Unity instance.
-=== "C#"
-```C#
+=== "JavaScript"
+```JS
 unity.createUnityInstance(canvas, config,
    (progress) => progressBarFull.style.width = 100 * progress + "%")
    .then((unityInstance) => {
