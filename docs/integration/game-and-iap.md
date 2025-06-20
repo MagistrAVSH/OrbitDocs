@@ -4,7 +4,7 @@
 **_Note: The admin dashboard is in the pre-release stage and subject to change.**  
   _How to get access_
 
-1. **Send command /admin to the Telegram bot  @cs_games_platform_bot**
+1. **Send command /admin to the Telegram bot  [@orbit_portal_bot](https://t.me/orbit_portal_bot/)**
 ![Описание изображения](images/game-and-iap/1.png)  
 2. **You will get a link to the admin dashboard where you can administrate your games**
 
@@ -37,7 +37,6 @@ After you create your items, you can integrate them into your game.
 === "Defold"
 	```lua
     portalsdk.get_shop_items(function(self, data)
-    print("GetShopItems: " .. table_to_string(data))
     end)
 	```
 _ShopItem has the same fields as in the admin, and the most important is the id_
@@ -78,7 +77,7 @@ _ShopItem has the same fields as in the admin, and the most important is the id_
     ```
 === "JavaScript"
     ```JS
-    interface CryptoSteamSDKShopItem {
+    interface ShopItem {
         id: number;
         name: string;
         description: string;
@@ -105,12 +104,12 @@ _ShopItem has the same fields as in the admin, and the most important is the id_
     ```  
 === "JavaScript"
     ```JS
-    getPurchasedShopItems: () => Promise<CryptoSteamSDKShopItem[]>;
+    const purchased = await PortalSDK.getPurchasedShopItems();
     ```
 === "Defold"
 	```LUA
     portalsdk.get_purchased_shop_items(function(self, data)
-    print("GetPurchasedShopItems: " .. table_to_string(data))
+        -- shopItems
     end)
 	```
 It gives you all the purchased items by the current player.   
@@ -121,23 +120,35 @@ If your item can be purchased infinitely, you can just not mark it. SDK API does
 === "Unity"
 	```C#
 	var result = await PortalSDK.OpenPurchaseConfirmModal(itemId);
-	if (result is { IsSuccessful: true })
+	if (result is { IsSuccessful: true }) {
+        Debug.Log("Purchase successful!")
+    }
+    else {
+        Debug.Log("Purchase failed.")
+    }
 	```
 === "JavaScript"
 	```JS
-	const result = await PortalSDK.OpenPurchaseConfirmModal(itemId);
-	if (result && result.IsSuccessful === true) {
+    const shopItems = await PortalSDK.getShopItems();
 
-	}
+    const shopItem = shopItems.find(item => item.id === itemId)
+
+	const result = await PortalSDK.openPurchaseConfirmModal(shopItem);
+
+    if(result.status === "success") {
+        console.log("Purchase successful!")
+    } else {
+        console.log("Purchase failed.")
+    }
 	```
 === "Defold"
 	```lua
     portalsdk.open_purchase_confirm_modal(itemId, function(self, data)
-    if data and data.IsSuccessful then
-        print("Purchase successful!")
-    else
-        print("Purchase failed.")
-    end
+        if data.status == "success" then
+            print("Purchase successful!")
+        else
+            print("Purchase failed.")
+        end
     end)
 	```
 After player will see modal window:  

@@ -8,17 +8,17 @@ The SDK provides three methods for data access. All operations are asynchronous 
 === "Unity"
 
 	```C#
-	//Write
+	// Write
 	PortalSDK.SetValue("string key", "string value");
-	//Read
+	// Read
 	string content = PortalSDK.GetValue("string key");
-	//Remove
+	// Remove
 	PortalSDK.RemoveValue("string key");
-	//Async versions:
 	
-	//Write
+	// Async versions:
+	// Read
 	string content = await PortalSDK.GetValueAsync("string key");
-	//Read
+	// Write
 	await PortalSDK.SetValueAsync("string key", "string value");
 	```
 
@@ -29,10 +29,10 @@ The SDK provides three methods for data access. All operations are asynchronous 
 		
 		portalsdk.set_value_sync("string key", "string value");
 
-		--Read
+		-- Read
 		local content = portalsdk.get_value_sync("string key");
 
-		--Remove
+		-- Remove
 		portalsdk.remove_value("string key");
 	```
 
@@ -40,10 +40,10 @@ The SDK provides three methods for data access. All operations are asynchronous 
 === "JavaScript"
 
 	```JS
-	//Write
+	// Write
 	window.PortalSDK.setValue("string key", "string value");
-	//Read
-	const content = window.PortalSDK.getValue("string key");
-	//Remove
+	// Read
+	const content = await window.PortalSDK.getValue("string key");
+	// Remove
 	window.PortalSDK.removeValue("string key");
 	```
