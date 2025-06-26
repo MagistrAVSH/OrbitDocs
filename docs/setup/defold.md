@@ -24,9 +24,16 @@ htmlfile = /portalsdk/manifests/web_template/engine_template.html
 cssfile = /portalsdk/manifests/web_template/style.css
 ```
 
-### API Description
-The API is documented in details: 
+### Examples and sources code
+
+Refer to the example project to see a example of how the API works.
+
+[API Usage Example](https://github.com/orbit-software/portalsdk-defold/blob/master/main/main.script)
+
+The source code is available on GitHub
 
 [PortalSDK Defold](https://github.com/orbit-software/portalsdk-defold)
+
+The API is documented in details:
+
 [Script API](https://github.com/orbit-software/portalsdk-defold/blob/master/portalsdk/api/portalsdk.script_api)  
-[API Usage Example](https://github.com/orbit-software/portalsdk-defold/blob/master/main/main.script)

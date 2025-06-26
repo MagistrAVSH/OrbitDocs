@@ -16,13 +16,6 @@ The SDK provides three methods for data access. All operations are asynchronous 
 	
     // Remove
 	PortalSDK.RemoveValue("string key");
-	
-	// Async versions:
-	// Read
-	string content = await PortalSDK.GetValueAsync("string key");
-	
-    // Write
-	await PortalSDK.SetValueAsync("string key", "string value");
 	```
 
 === "Defold"

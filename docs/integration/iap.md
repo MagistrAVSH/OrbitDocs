@@ -1,10 +1,10 @@
 # In-game purchases
 ## How to add, edit, or remove items
-#### [1. Get access to admin dashboard](/integration/admin-panel)
+#### [1. Get access to admin dashboard](/upload-game/admin-panel)
 #### 2. Select one of your games and click the store button `Items`
-![Описание изображения](images/game-and-iap/2.png)
+![img](images/game-and-iap/2.png)
 #### 3. You have access to change items, their description, and prices
-![Описание изображения](images/game-and-iap/3.png)  
+![img](images/game-and-iap/3.png)  
 
 
 ## How to use Shop API
@@ -22,8 +22,7 @@ After you create your items, you can integrate them into your game.
 	```
 === "Defold"
 	```lua
-    portalsdk.get_shop_items(function(self, data)
-    end)
+    portalsdk.get_shop_items(function(self, data) end)
 	```
 
 `ShopItem` has the same fields as in the admin, and the most important is the `id`
@@ -99,7 +98,7 @@ After you create your items, you can integrate them into your game.
 === "Defold"
 	```LUA
     portalsdk.get_purchased_shop_items(function(self, result)
-        -- shopItems
+        -- purchased shopItems
     end)
 	```
 It gives you all the purchased items by the current player.   
@@ -144,7 +143,7 @@ If your item can be purchased infinitely, you can just not mark it.
     end)
 	```
 After player will see modal window:  
-  ![Описание изображения](images/game-and-iap/6.png)  
+  ![img](images/game-and-iap/6.png)  
   If a user doesn't have enough balance, a top-up popup will be shown  
-  ![Описание изображения](images/game-and-iap/7.png)  
+  ![img](images/game-and-iap/7.png)  
   If the player confirms a purchase, after all, you will get the response `IsSuccessful = true` or `status == "success"`
