@@ -1,5 +1,5 @@
 site_name: Orbit Platform Documentation
-site_url: https://magistravsh.github.io/OrbitDocs
+site_url: https://docs.games.orbit.land
 theme:
   name: material
   custom_dir: overrides
@@ -12,7 +12,6 @@ theme:
     - navigation.sections
     - navigation.tabs
     - navigation.path
-    - navigation.indexes
     - navigation.top
     - search.suggest
     - search.highlight

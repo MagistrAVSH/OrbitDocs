@@ -1,6 +1,6 @@
 nav:
-  - Home: https://magistravsh.github.io/OrbitDocs
-  - getting-started
+  - Home: /
+  - introduction
   - setup
   - integration
   - upload-game
