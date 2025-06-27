@@ -6,6 +6,11 @@
 
   <!-- Additional styles for landing page -->
   <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+    }
 
     /* Application header should be static for the landing page */
     .md-header {
@@ -30,50 +35,76 @@
     }
 
     body {
-  background: url('assets/images/cosmo2.jpg') no-repeat center center fixed;
-  background-size: cover;
-}
+      background: url('assets/images/cosmo2.jpg') no-repeat center center fixed;
+      background-size: cover;
+      overflow: hidden;
+    }
 
-.mdx-container {
-  background: url('assets/images/cosmo2.jpg') no-repeat center center;
-  background-size: cover;
-  min-height: 80vh;
-  display: flex;
-  align-items: flex-start;
-  padding-top: 120px;
-}
+    .mdx-container {
+      background: url('assets/images/cosmo2.jpg') no-repeat center center;
+      background-size: cover;
+      height: 100vh;
+      display: flex;
+      align-items: flex-end;
+    }
 
-.mdx-hero {
-  width: 100%;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  align-items: center;
-}
+    .mdx-hero {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      width: 100%;
+    }
 
-.md-grid {
-  max-width: 100%;
-  padding: 0;
-  margin: 5px;
-}
+    .md-grid {
+      max-width: 100%;
+      padding: 0;
+      margin: 0;
+    }
 
-.mdx-hero__content h1 {
-  margin-top: 0;
-}
+    .mdx-hero__header h1 {
+      margin-bottom: 24px;
+      text-align: center;
+    }
 
-.mdx-hero__content {
-  margin-left: 40px !important;
-  padding-left: 40px !important;
-  margin-bottom: 0px; 
-  text-align: left;
-  /* margin-top: 200px; */
-}
+    .mdx-hero__image img {
+      display: block;
+      margin: 0 auto;
+      max-width: 90vw;
+      height: auto;
+    }
+
+    .mdx-hero__content {
+      margin-top: 24px;
+      text-align: center;
+    }
 
     /* Hide navigation */
     @media screen and (min-width: 76.25em) {
       .md-sidebar--primary {
         display: none;
       }
+    }
+
+    .mdx-hero__content .md-button {
+      background: #FFD700;   
+      color: #222;              
+      border: 2px solid #FFD700;
+      border-radius: 8px;       
+      font-weight: bold;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+      transition: background 0.2s, color 0.2s;
+    }
+
+    .mdx-hero__content .md-button:hover {
+      background: #fff;
+      color: #FFD700;
+      border-color: #FFD700;
+    }
+
+    .mdx-hero__content, .mdx-hero__content h1, .mdx-hero__content p {
+      color: #000102;
     }
   </style>
   
@@ -82,21 +113,13 @@
   <section class="mdx-container">
     <div class="md-grid md-typeset">
       <div class="mdx-hero">
-
-        <!-- Hero image -->
-        <!-- <div class="mdx-hero__image"> -->
-          <!-- <img -->
-            <!-- src="assets/images/cosmo.jpg" -->
-            <!-- alt="" -->
-            <!-- width="1659" -->
-            <!-- height="1200" -->
-            <!-- draggable="false" -->
-          <!-- > -->
-        <!-- </div> -->
-
-        <!-- Hero content -->
-        <div class="mdx-hero__content">
+        <div class="mdx-hero__header">
           <h1>Welcome to the Orbit Platform Documentation</h1>
+        </div>
+        <div class="mdx-hero__image">
+          <img src="assets/images/cosmo2.jpg" alt="UFO" width="400" />
+        </div>
+        <div class="mdx-hero__content">
           <p>Welcome to the official Orbit Platform documentation! Here, you'll find all the essential information to get started quickly with the platform.</p>
           <a
             href="introduction/"
