@@ -3,6 +3,7 @@ site_url: https://docs.portalapp.games/
 theme:
   name: material
   custom_dir: overrides
+  favicon: assets/images/Pictogrammers-Material-Orbit.512.png
   icon:
     logo: material/orbit
   features:
