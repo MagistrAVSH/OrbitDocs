@@ -16,7 +16,7 @@ Portal provides a robust toolset for integrating key features such as in-game pu
 
 3. **How can we upload game build files to the platform?**
 
-    Through GitHub. For more details, refer to the [Upload Game](/upload-game/) section.
+    Through GitHub. For more details, refer to the [Upload Game](/upload-game/0-upload-game/) section.
 
 4. **Can we use our hosting for web builds?**
 

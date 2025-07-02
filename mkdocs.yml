@@ -1,5 +1,5 @@
 site_name: Orbit Platform Documentation
-site_url: https://docs.games.orbit.land
+site_url: https://docs.portalapp.games/
 theme:
   name: material
   custom_dir: overrides

@@ -15,6 +15,11 @@
     /* Application header should be static for the landing page */
     .md-header {
       position: initial;
+      background: none!important;
+    }
+
+    .md-tabs {
+      background: none!important;
     }
 
     /* Remove spacing, as we cannot hide it completely */
@@ -35,19 +40,19 @@
     }
 
     body {
-      background: url('assets/images/cosmo2.jpg') no-repeat center center fixed;
+      background: url('assets/images/cosmo2.jpg') no-repeat center center;
+      background-position-y: -40%;
       background-size: cover;
       overflow: hidden;
     }
 
     .mdx-container {
-      background: url('assets/images/cosmo2.jpg') no-repeat center center;
-      background-size: cover;
+      background: none!important;
       height: 100vh;
       display: flex;
       align-items: flex-end;
       justify-content: center;
-      padding-top: 0;
+      padding-top: 0px;
     }
 
     .mdx-hero {
@@ -57,13 +62,14 @@
       justify-content: center;
       min-height: 100vh;
       width: 100%;
-      justify-content: start
+      justify-content: start;
+      padding-top: 30px;
     }
 
     .md-grid {
-      max-width: 100%;
-      padding: 0;
-      margin: 0;
+      /*max-width: 100%;*/
+      /*padding: 0;*/
+      /*margin: 0;*/
     }
 
     .mdx-hero__header h1,
