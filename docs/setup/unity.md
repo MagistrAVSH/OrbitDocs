@@ -1,6 +1,6 @@
 # Unity Engine
 
-### Prerequisites  
+### **Prerequisites**  
   To work with PortalSDK, you’ll need the following:
 
 **Unity Versions:** Unity 2022 LTS, or Unity 6 LTS (Unity 6 is preferable due to updated WebGL support).  
@@ -77,7 +77,7 @@ Move `com.orbit.portalsdk` directory into `Assets/` directory of your Unity Proj
 
 ![img](images/unity-games/7.png)  
  
-### 5. Step: Set WebGL Publishing settings
+### ***5. Step: Set WebGL Publishing settings***
 
 **Important settings:**
 
@@ -88,7 +88,7 @@ Move `com.orbit.portalsdk` directory into `Assets/` directory of your Unity Proj
   - Enable BigInt: `false`
 
 ![img](images/unity-games/8.png)  
-### 6. Step: Build and Run for Testing  
+### 6. ***Step: Build and Run for Testing***  
   - Go to File > Build Settings in Unity.  
   - Select WebGL as your platform and click Switch Platform.  
   - Click Build and Run to test your setup.  
