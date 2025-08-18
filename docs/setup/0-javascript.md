@@ -23,8 +23,16 @@ Call the initialization functions at the start of your application:
 === "JavaScript"
 ```JS
 await PortalSDK.initialize();  
+```
+
+Initialize overlay with default options or with [startup configuration](/integration/startup-configuration/)
+
+=== "JavaScript"
+```JS
 PortalSDK.initializeOverlay();
 ```
+
+
 
 
 #### 4. Launch an Advertisement *(Optional)*:  
