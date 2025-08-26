@@ -147,7 +147,10 @@ After player will see modal window:
   If a user doesn't have enough balance, a top-up popup will be shown  
   ![img](images/game-and-iap/7.png)  
   If the player confirms a purchase, after all, you will get the response `IsSuccessful = true` or `status == "success"`
-## Icon
+## Resources
 Here’s a gem icon you can use in your in-game store.  
 We’ve packed it in an archive with different sizes and formats, so it’s easy to add.  
 We recommend using it to make your shop look clear and familiar to players.  
+Here icon examples:  
+![img](images/game-and-iap/screen.png)  
+&#8194;x1&#8195;&#8195; x2&#8195;&#8195;&#8195; x3
