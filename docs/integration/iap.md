@@ -154,3 +154,6 @@ We recommend using it to make your shop look clear and familiar to players.
 Here icon examples:  
 ![img](images/game-and-iap/screen.png)  
 &#8194;x1&#8195;&#8195; x2&#8195;&#8195;&#8195; x3
+
+You can dowload icons here:
+[icon.zip](/docs/static/icons.zip){:download}
