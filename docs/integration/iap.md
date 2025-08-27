@@ -156,4 +156,4 @@ Here icon examples:
 &#8194;x1&#8195;&#8195; x2&#8195;&#8195;&#8195; x3
 
 You can dowload icons here:
-[icon.zip](/docs/static/icons.zip){:download}
+<a href="../static/icons.zip" download>Icons.zip</a>
