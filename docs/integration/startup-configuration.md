@@ -35,6 +35,7 @@ You need to reset `localStorage` for that. Please refer to [how to enable dev to
 	 overlayPosition: "bottomRight"
 	 // "topLeft" | "topRight" | "bottomLeft" |"bottomRight"
 	}; 
+	```
 
 
 **Expected results**
