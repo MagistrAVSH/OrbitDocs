@@ -49,32 +49,7 @@ if (await PortalSDK.isAdEnabled()) {
 }
 ```
 
-#### 5. Setup game time tracking  
-You must add the code for tracking game time as shown here:
-
-=== "JavaScript"
-```JS
-
-let timer;
-const trackTimeEveryS = 20 // 20 seconds
-
-function startGameTimeTrack() {
-   if (timer) clearInterval(timer)
-
-   window.PortalSDK.trackGameTimeTick()
-
-   timer = setInterval(() => {
-       window.PortalSDK.trackGameTimeTick()
-   }, trackTimeEveryS * 1000)
-}
-```
-And call the code above at the moment of loading the game instance.  
-=== "JavaScript"
-```js
-startGameTimeTrack()
-```
-
-#### 6. Call game-ready event  
+#### 5. Call game-ready event  
   Call this method when the game is ready and visible to the user.  
 === "JavaScript"  
 ```js
