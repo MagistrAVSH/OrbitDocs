@@ -33,23 +33,7 @@ PortalSDK.initializeOverlay();
 ```
 
 
-
-
-#### 4. Launch an Advertisement *(Optional)*:  
-If you need to launch an ad at the start, check if ads are enabled and then request one:  
-
-=== "JavaScript"
-```JS
-if (await PortalSDK.isAdEnabled()) {
-    try {
-        await PortalSDK.requestAd();
-    } catch (ex) {
-        console.error(ex);
-    }
-}
-```
-
-#### 5. Call game-ready event  
+#### 4. Call game-ready event  
   Call this method when the game is ready and visible to the user.  
 === "JavaScript"  
 ```js
