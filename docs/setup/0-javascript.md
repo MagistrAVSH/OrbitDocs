@@ -29,7 +29,24 @@ await window.PortalSDK.initialize(undefined, {
 
 - `disable_startup_ads` - When set to `true`, prevents ads from automatically displaying at game startup. Useful for games that want full control over when ads are shown.
 
-Initialize overlay with default options or with [startup configuration](/integration/startup-configuration/)
+#### 2.1. Bot ID Parameter
+
+The `initialize()` method also accepts a `botId` as the first parameter:
+
+=== "JavaScript"
+```JS
+await window.PortalSDK.initialize(34398689);
+```
+
+**When do you need to specify botId?**
+
+The `botId` parameter is **not necessary** if you're using our [hosting and upload process](/upload-game/0-upload-game/). However, if you're hosting the game on your own server (which we don't recommend), you **must** add the `botId` parameter - it's important for authentication.
+
+To find your game's bot ID, see [How to find your game bot ID](/integration/telegram-botid/).
+
+#### 2.2. Initialize Overlay
+
+Initialize overlay with default options or with [startup configuration](/integration/startup-configuration/):
 
 === "JavaScript"
 ```JS
