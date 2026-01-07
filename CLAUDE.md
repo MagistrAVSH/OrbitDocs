@@ -41,8 +41,8 @@ The site uses a hybrid navigation system:
 
 2. **Section hierarchy:**
    - `introduction/` - Platform overview and FAQ
-   - `setup/` - SDK installation for JavaScript, Unity, and Defold
-   - `integration/` - Feature integration guides (ads, IAP, localization, persistent state, safe area, startup config, TG devtools)
+   - `setup/` - SDK installation for JavaScript, Unity, and Defold, plus local testing guide
+   - `integration/` - Feature integration guides (ads, IAP, localization, persistent state, safe area, startup config, TG devtools, ad callbacks, telegram bot ID)
    - `upload-game/` - Game deployment and admin panel
 
 ### Custom Theme Components
@@ -98,6 +98,23 @@ await PortalSDK.initialize(undefined, {
 Both callbacks work with `requestAd()` and `requestRewardAd()`. Set to `null` to disable.
 
 **Important:** Always disable game audio and input during ad playback to prevent interference.
+
+#### Local Testing
+
+Developers can test their games locally with full SDK functionality before deployment:
+
+1. Extract `initData` from Telegram WebApp console (`window.Telegram.WebApp.initData`)
+2. Modify SDK initialization to include `botId` and `authData` parameters
+3. Build and run locally
+4. **Critical:** Remove test parameters before uploading to production
+
+The local testing documentation is in `setup/local-testing.md` and is linked from all three setup guides (JavaScript, Unity, Defold).
+
+**Important:** Games cannot run with full SDK functionality locally without either:
+- Using the local testing configuration (with `botId` and `authData`)
+- Being deployed to the platform via GitHub
+
+This is emphasized in the Unity setup guide which explains both testing options.
 
 ## Content Guidelines
 

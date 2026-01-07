@@ -36,4 +36,8 @@ The source code is available on GitHub
 
 The API is documented in details:
 
-[Script API](https://github.com/orbit-software/portalsdk-defold/blob/master/portalsdk/api/portalsdk.script_api)  
+[Script API](https://github.com/orbit-software/portalsdk-defold/blob/master/portalsdk/api/portalsdk.script_api)
+
+## Local Testing
+
+For instructions on how to test your Defold HTML5 game locally with full PortalSDK functionality (overlay, ads, IAPs), see the [Local Testing Guide](/setup/local-testing/).

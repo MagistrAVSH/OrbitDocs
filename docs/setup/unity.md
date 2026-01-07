@@ -88,8 +88,25 @@ Move `com.orbit.portalsdk` directory into `Assets/` directory of your Unity Proj
   - Enable BigInt: `false`
 
 ![img](images/unity-games/8.png)  
-### 6. ***Step: Build and Run for Testing***  
-  - Go to File > Build Settings in Unity.  
-  - Select WebGL as your platform and click Switch Platform.  
-  - Click Build and Run to test your setup.  
+### 6. ***Step: Build and Test***
+
+To test your game, you have two options:
+
+#### Option A: Local Testing (Recommended for Development)
+
+Build and Run in Unity will only work with the PortalSDK if you configure local testing parameters.
+
+For instructions on how to test your Unity WebGL game locally with full PortalSDK functionality (overlay, ads, IAPs), see the [Local Testing Guide](/setup/local-testing/).
+
+#### Option B: Upload to Platform
+
+Alternatively, you can upload your build to the platform for testing:
+
+1. In Unity, go to **File > Build Settings**
+2. Select **WebGL** as your platform and click **Switch Platform**
+3. Click **Build** (not Build and Run)
+4. Upload the build files to GitHub following the [Upload Game Guide](/upload-game/0-upload-game/)
+
+!!! note
+    Without local testing configuration, "Build and Run" will launch the game but the PortalSDK features (overlay, ads, IAPs) will not function properly. You must either use local testing OR upload to the platform.
 

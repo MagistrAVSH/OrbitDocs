@@ -44,5 +44,9 @@ window.PortalSDK.initializeOverlay();
 window.PortalSDK.gameReady()
 ```  
   
-**Notes:**  
+**Notes:**
 *Initialization should occur as early as possible in your application lifecycle to prevent delays.*
+
+## Local Testing
+
+For instructions on how to test your game locally with full PortalSDK functionality (overlay, ads, IAPs), see the [Local Testing Guide](/setup/local-testing/).
