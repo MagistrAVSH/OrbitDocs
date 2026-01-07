@@ -1,12 +1,12 @@
-# Admin dashboard
+# Admin Console
 
-_Note: Access to the dashboard is provided by request and requires your Telegram nickname._
+_Note: Access to the console is provided by request and requires your Telegram nickname._
 
 ### How to get access ###
 
 #### 1. Send command `/admin` to the Telegram bot  [@orbit_portal_bot](https://t.me/orbit_portal_bot/)
 ![img](../integration/images/game-and-iap/0.png)  
-#### 2. You will get a link to the admin dashboard where you can administrate your games
+#### 2. You will get a link to the admin console where you can administrate your games
 
 ### How to add, edit, or remove items
 

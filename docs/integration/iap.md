@@ -1,6 +1,6 @@
 # In-game purchases
 ## How to add, edit, or remove items
-#### [1. Get access to admin dashboard](../upload-game/admin-panel.md)
+#### [1. Get access to admin console](../upload-game/admin-panel.md)
 #### 2. Select one of your games and click the store button `Items`
 ![img](images/game-and-iap/2.png)
 #### 3. You have access to change items, their description, and prices

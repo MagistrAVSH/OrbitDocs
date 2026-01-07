@@ -6,7 +6,7 @@ This guide explains how to test your game locally with the PortalSDK before uplo
 
 Before you begin, ensure you have:
 
-- Access to the game in Portal ([admin dashboard](/upload-game/admin-panel/))
+- Access to the game in Portal ([admin console](/upload-game/admin-panel/))
 
 ### How to test your game locally
 
