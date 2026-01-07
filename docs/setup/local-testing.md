@@ -5,24 +5,22 @@ This guide explains how to test your game locally with the PortalSDK before uplo
 ### Prerequisites
 
 Before you begin, ensure you have:
-- Built your game for WebGL/HTML5
-- Access to the game in Telegram Portal
-- Your game's `index.html` file ready to edit
+
+- Access to the game in Portal ([admin dashboard](/upload-game/admin-panel/))
 
 ### How to test your game locally
 
 #### 1. Step: Get Authentication Data
 
-First, you need to enable DevTools in Telegram. For detailed instructions, see [how to enable DevTools in Telegram](/integration/tg-devtools/).
-
-1. Open the browser DevTools console
-2. Paste the following command into the console:
+1. Open your game in Telegram mini app
+2. Open dev tools - for detailed instructions, see [how to enable DevTools in Telegram](/integration/tg-devtools/)
+3. In the browser DevTools console, paste the following command:
 
 ```js
 window.Telegram.WebApp.initData
 ```
 
-3. Copy the output string. It will look like this:
+4. Copy the output string. It will look like this:
 
 ```
 user=%7B%22id%22%3A122374628%2C%22first_name%22%3A...
@@ -30,8 +28,8 @@ user=%7B%22id%22%3A122374628%2C%22first_name%22%3A...
 
 ![Console output example](images/local-testing/first-image.png)
 
-!!! warning "Important"
-    The `botId` and `authData` must be from the same Telegram mini app. Do not mix authentication data from different apps.
+!!! danger "CRITICAL: Authentication Data Must Match"
+    The `botId` and `authData` **must** be from the same Telegram mini app. Do not mix authentication data from different apps. **Without matching authentication data, local testing will NOT work.**
 
 #### 2. Step: Modify Your Index File
 
@@ -92,10 +90,10 @@ Replace:
 
 === "Defold"
 
-    1. Go to **Project > Build**
-    2. Select **HTML5** as the platform
-    3. Build and run your project
-    4. Open the built `index.html` in your browser
+    1. Go to **Project > Build HTML5**
+    2. Test in your browser
+
+    That's all!
 
 === "JavaScript"
 
@@ -117,7 +115,7 @@ Change the code back to:
 })();
 ```
 
-Remove the `botId` and `authData` parameters. If you forget this step, your game may not work correctly in production.
+Remove the `botId` and `authData` parameters. If you forget this step, your game **WILL NOT work correctly** in production.
 
 ### Troubleshooting
 
@@ -125,6 +123,4 @@ If local testing isn't working:
 
 1. **Verify authentication data**: Make sure the `authData` string is copied completely
 2. **Check bot ID**: Ensure the bot ID matches the mini app you got the auth data from
-3. **Clear browser cache**: Old cached data can sometimes interfere
-4. **Check console errors**: Open browser DevTools and look for error messages
-5. **Verify SDK version**: Make sure you're using the latest PortalSDK version
+3. **Check console errors**: Open browser DevTools and look for error messages
