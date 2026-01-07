@@ -1,6 +1,17 @@
 # Advertisement setup
 SDK suggests for now several ways for ad integration into your apps:
 
+### Disabling startup ads
+By default, ads may be shown automatically when your game starts. To disable this behavior and have full control over when ads are displayed, configure the SDK during initialization:
+
+=== "JavaScript"
+
+	```JS
+	await window.PortalSDK.initialize(undefined, {
+	  disable_startup_ads: true,
+	});
+	```
+
 ### Interstitial ads
 Interstitial ads are used to display video ads and should be triggered on natural breaks in your game.
 

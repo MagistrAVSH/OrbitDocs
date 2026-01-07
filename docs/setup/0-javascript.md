@@ -8,13 +8,26 @@
 ```
 
 
-#### 2. Initialize the SDK   
+#### 2. Initialize the SDK
 Call the initialization functions at the start of your application:
 
 === "JavaScript"
 ```JS
-await window.PortalSDK.initialize();  
+await window.PortalSDK.initialize();
 ```
+
+You can also pass configuration options to control SDK behavior:
+
+=== "JavaScript"
+```JS
+await window.PortalSDK.initialize(undefined, {
+  disable_startup_ads: true,
+});
+```
+
+**Configuration Options:**
+
+- `disable_startup_ads` - When set to `true`, prevents ads from automatically displaying at game startup. Useful for games that want full control over when ads are shown.
 
 Initialize overlay with default options or with [startup configuration](/integration/startup-configuration/)
 
