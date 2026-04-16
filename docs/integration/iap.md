@@ -1,11 +1,28 @@
 # In-game purchases
+This section explains how to manage your game's store inventory, including adding new products and performing bulk updates.
+
 ## How to add, edit, or remove items
-#### [1. Get access to admin console](../upload-game/admin-panel.md)
-#### 2. Select one of your games and click the store button `Items`
+**[1. Access the Admin Console](../upload-game/admin-panel.md)**
+
+**2.  In the game list, find your game and click the light-blue `Items` icon (cube) in the **Actions** column.**
 ![img](images/game-and-iap/2.png)
-#### 3. You have access to change items, their description, and prices
+
+**3. You now have access to the dashboard where you can view and modify item IDs, names, descriptions, and prices.**
 ![img](images/game-and-iap/3.png)  
 
+### Control Elements
+
+To populate or modify your shop, use the control buttons in the top-right corner:
+
+*   **Create new item**: Opens a form to manually add a single product. You will need to define:
+    *   **ID**: A unique identifier (must match the ID used in your game code).
+    *   **Name & Description**: Internal metadata for your convenience. **Note:** This information is only visible in the Admin Console and is not displayed to players.
+    *   **Price**: The cost of the item.
+*   **Batch Update**: For bulk operations with game items, use the **Batch Update** feature:
+    - The system uses **CSV files** for bulk operations.
+
+    - You will find detailed **CSV format** requirements and a data example directly on the **Batch Update** page
+![img](images/game-and-iap/4.png)
 
 ## How to use Shop API
 
@@ -157,3 +174,6 @@ Here icon examples:
 
 You can dowload icons here:
 [Icons.zip](../static/icons.zip)
+---
+## Next Steps
+After setting up your items, proceed to [IAP Server Validation](/integration/iap-validation/) to secure your transactions.
