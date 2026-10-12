@@ -12,12 +12,12 @@ _Note: Access to the console is provided by request and requires your Telegram n
 ## How to add, edit, or remove items
 
 !!! info ""
-    Detailed guide on managing your game's store inventory: [In-game purchases](/integration/iap)
+    Detailed guide on managing your game's store inventory: [In-game purchases](/integration/iap/)
   
 ## Display and visibility configuration
 #### 1. Screen orientation and fullscreen mode
 ![img](images/admin-panel/2.png)    
-![img](images/admin-panel/3.png) 
+![img](images/admin-panel/3.png)  
 !!! success "Fullscreen mode is handled automatically by the SDK"
 _Example: Automatic system prompt for screen rotation._
 ![img](images/admin-panel/8.jpg) 
@@ -41,3 +41,8 @@ This setting controls the game's visibility and publication status within Portal
 #### 3. Media: screenshots, image, avatars, ...
 
 ![img](images/admin-panel/7.png) 
+
+#### How to Add Wallet API
+
+!!! info ""
+    Detailed guide on handling player balances, charging, and depositing coins via Wallet API: [Wallet API integration](/integration/wallet_api/)
